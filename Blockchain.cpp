@@ -10,6 +10,7 @@ void Blockchain::AddBlock(Block bNew)
     bNew.sPrevHash = _GetLastBlock().sHash;
     cout << "Previous Block: " << bNew.sPrevHash << endl;
     bNew.MineBlock(nDifficulty);
+    
     _vChain.push_back(bNew);
 }
 
